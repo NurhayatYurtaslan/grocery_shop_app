@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_shop_app/app/view/intro_view/view_intro.dart';
+import 'package:grocery_shop_app/app/view/view_intro/intro_view.dart';
 
 void main() {
   runApp(const MyApp());
