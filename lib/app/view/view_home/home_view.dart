@@ -69,7 +69,6 @@ class HomeView extends StatelessWidget {
                 style: TextStyle(fontSize: 20),
               ),
             ),
-
             Expanded(child: Consumer<CartModel>(
               builder: (context, value, child) {
                 return GridView.builder(
