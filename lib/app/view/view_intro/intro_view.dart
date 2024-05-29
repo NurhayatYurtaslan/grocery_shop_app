@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shop_app/app/view/view_home/home_view.dart';
 import 'package:grocery_shop_app/gen/assets.gen.dart';
 
 class IntroView extends StatelessWidget {
@@ -34,16 +35,23 @@ class IntroView extends StatelessWidget {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           //get started button
-          Container(
-              decoration: BoxDecoration(
-                  color: Colors.green, borderRadius: BorderRadius.circular(15)),
-              padding:
-                  EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
-              child: const Text(
-                "Get Start",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ))
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return const HomeView();
+            })),
+            child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(15)),
+                padding:
+                    EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
+                child: const Text(
+                  "Get Start",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                )),
+          )
         ],
       ),
     );
